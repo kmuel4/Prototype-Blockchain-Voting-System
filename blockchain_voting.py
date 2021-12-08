@@ -96,15 +96,5 @@ class Blockchain(object):
         hex_hash = raw_hash.hexdigest()
 
         return hex_hash
-
-    '''
-    Validate the pending votes by checking that the Voter is in the voter_registry, if it is in the registry then remove it.
-    if it is not in the registry flag the vote
-    
-    @param
-    
-    @return
-    '''
-    #def validate():
         
     
