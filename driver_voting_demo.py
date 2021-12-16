@@ -56,12 +56,10 @@ voter_id = input("Enter your voter ID:  ")
 print("Validating...")
 time.sleep(2)
 
-#poll.validate_id checks to make sure the voter ID inputted is in the voter registry
-#and prints the associated name
+#poll.validate_id checks to make sure the voter ID inputted is in the voter registry and prints the associated name
 valid_id = poll.validate_id(voter_id)
 print("\n>------------------------------------------------------------------<")
-#if the inputted ID is in the voter registry, continue to voting
-'''need to add in a check if voter_id and voter_name are on the same line'''
+#& validate_user == True
 if(valid_id == True ):
     time.sleep(1)
     candidate = input("Please cast your vote: ")
