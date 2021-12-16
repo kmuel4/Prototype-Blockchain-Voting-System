@@ -31,7 +31,7 @@ blockchain = Blockchain()
 
 # print("\nThe contents of Block 2 with three simulated votes:\n", blockchain.chain[2])
 
-stdin = input("\nVoting initiated, press any key to begin facial scan:   ")
+stdin = input("\nVoting initiated. Press any key to begin facial identification:   ")
 print(">------------------------------------------------------------------<\n")
 #lines 38-41 for demonstration purposes
 print("Angle your head left...")
@@ -65,15 +65,16 @@ print("\n>------------------------------------------------------------------<")
 if(valid_id == True ):
     time.sleep(1)
     candidate = input("Please cast your vote: ")
-    v5 = blockchain.new_vote(voter_id, "candidate")
+    v5 = blockchain.new_vote(voter_id, candidate)
     #submit the blocks
-    blockchain.new_block(v5)
+    blockchain.new_block(proof=50)
     print("Vote submitted.")
 else:
-    print("Invalid voter ID. Your booth has been flagged.")
+    print("\nInvalid voter ID. Your booth has been flagged.")
 print("\n>------------------------------------------------------------------<")
     
 '''more testing'''
+#print("This is the block we submitted:\t", blockchain.chain[1])
 # print("\nWhen the polling booth is closed, a new block is created to store all votes in pending_votes.\n", blockchain.pending_votes)
 # print("\nAs you can see, pending_votes is now an empty array")
 
