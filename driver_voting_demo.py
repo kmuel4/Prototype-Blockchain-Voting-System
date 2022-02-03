@@ -15,6 +15,13 @@ blockchain = Blockchain()
 
 
 '''manual testing of blockchain contents'''
+# v1 = blockchain.new_vote(20532964, "Elmo")
+# blockchain.new_block(proof=50)
+# v2 = blockchain.new_vote(80888926, "Kermit")
+# blockchain.new_block(proof=50)
+# print("This is genesis block:\n", blockchain.chain[0])
+# print("\nThis is block 2\n", blockchain.chain[1])
+# print("\nThis is block 3:\n", blockchain.chain[2])
 # print("\nThis is the chain with only the genesis block, block 0:\n ", blockchain.chain)
 
 # #Create new votes for pending_votes
@@ -71,8 +78,8 @@ else:
     print("\nInvalid voter ID. Your booth has been flagged.")
 print("\n>------------------------------------------------------------------<")
     
-'''more testing'''
-#print("This is the block we submitted:\t", blockchain.chain[1])
+# '''more testing'''
+print("This is the block we submitted:\n", blockchain.chain[1])
 # print("\nWhen the polling booth is closed, a new block is created to store all votes in pending_votes.\n", blockchain.pending_votes)
 # print("\nAs you can see, pending_votes is now an empty array")
 

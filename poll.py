@@ -135,7 +135,20 @@ def validate_name(given_name):
 
 	voter_reg.close()
 
-
+'''
+    Validate name and ID are the same
+'''
+def validate_user(given_name, given_id):
+    sline = ""
+    voter_reg = open("voter registry.txt", "r")
+    
+    for line in voter_reg:
+        sline = line.split(", ")
+        if sline[1] == given_name & sline[0] == given_id:
+            return True
+        else:
+            return False
+    voter_reg.close()            
 
 # Following code is for testing purposes
 """

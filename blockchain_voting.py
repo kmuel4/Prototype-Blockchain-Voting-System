@@ -30,6 +30,8 @@ class Blockchain(object):
     '''
     Create a new block of info using a JSON object, reset the pending_votes array and append the block to the chain
     
+    @param previous_hash
+    
     @var index          blocks location in the chain
     @var timestamp      exact time in which the block was made
     @var votes          votes that are in pending_votes
@@ -49,13 +51,13 @@ class Blockchain(object):
         self.pending_votes = []
         self.chain.append(block)
         return block
-
+    
     '''
     Find the most recent block in the chain
     
     @param self     object
     
-    @return         none
+    @return         self.chain[-1]
     '''
     @property
     def last_block(self):
